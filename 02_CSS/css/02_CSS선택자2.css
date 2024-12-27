@@ -1,0 +1,99 @@
+/* .css 파일 == <style> 태그 내부 */
+
+strong {
+    color: steelblue;
+    font-size: 18px;
+    text-decoration: underline;
+    font-family: "맑은고딕";
+}
+
+code {
+    background-color: #f5e7be;
+    display: block; /* 요소의 형식을 block 형식(행 분할)으로 변경 */
+    font-weight: bold;
+    font-size: 14px;
+}
+/* 기본 속성 선택자 1 - 속성명 */
+[name] {
+    background-color: rgb(130, 245, 101);
+}
+
+/* 기본 속성 선택자 2 - 속성명=속성값 */
+[name="bbb"] {
+    font-size: 20px;
+}
+[name="bbb"] {
+    text-decoration: underline;
+}
+
+/* 자식 선택자 ( A > B) */
+.parent-1 > li {
+    font-size: 24px;
+}
+/* 속성명 보다 class가 나중에 적용된다. */
+.parent-1 > .child-1 {
+    font-size: 20px;
+    background-color: yellow;
+}
+
+.parent-1 > li > span {
+    background-color: red;
+}
+
+.parent-2 > p {
+    background-color: aqua;
+    font-size: 42px; /* 안먹음 -> 후손선택자(A B)가 나중에 적용 */
+}
+/* 후손 선택자 A B */
+.parent-2 p {
+    font-size: 24px;
+}
+
+.parent-2 * {
+    font-weight: 800;
+    font-size: 72px; /* p태그는 영향을 받지 않음 적용순서 ((A *) -> (A>B) -> (A B) */
+}
+
+/* 반응 선택자 */
+.test-btn {
+    width: 300px;
+    height: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    color: deeppink;
+    border: 2px solid deeppink;
+}
+.test-btn:hover {
+    background-color: deeppink;
+    color: white;
+}
+.test-btn:active {
+    transform: scale(0.9);
+}
+
+/* 상태 선택자 */
+.input-1:focus {
+    background-color: lightgreen;
+}
+
+/* 체크시 보여지는 표시는 이미지다. 이미지를 불러오는 방식으로 변경가능 */
+/* 최근에 변경 css 추가됨 */
+input[name="radioGroup"]:checked {
+    width: 30px;
+    height: 30px;
+}
+
+input[name="checkGroup"]:checked {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+.input-3:enabled {
+    background-color: yellowgreen;
+}
+.input-3:disabled {
+    background-color: salmon;
+}
