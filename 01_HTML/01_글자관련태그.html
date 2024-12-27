@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- !DOCTYPE : 현재 문서(Document)의 형식(type) 정의 -->
+<!-- !DOCTYPE html : 현재문서는 html 형식이다 라고 정의 -->
+<html lang="en">
+<!-- html 태그 : html 코드를 작성하기 위한 태그 -->
+
+<head>
+    <!-- head태그 : html을 정의하는 내용을 작성 -->
+    <!-- meta 태그 : 보이지 않는 작은 설정(검색엔지 노출 설정) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서의 제목을 정의하는 태그</title>
+</head>
+
+<body>
+    body 태그 : 브라우저에 보여질 내용을 작성하는 태그
+
+    <hr>
+    markdown 어쩌고
+    <hr>
+    <!-- 
+        h1, h2, h3, h4, h5, h6 태그:
+        제목(Highlight) 제목을 나타내는 태그
+    -->
+    <h1>h1 태그 입니다.</h1>
+    <h2>h2 태그 입니다.</h2>
+    <h3>h3 태그 입니다.</h3>
+    <h4>h4 태그 입니다.</h4>
+    <h5>h5 태그 입니다.</h5>
+    <h6>h6 태그 입니다.</h6>
+
+    <hr>
+    <h1>HTML에서 연속적인 띄어쓰기/엔터 문제점</h1>
+    가 나
+    다
+    <h3 style="color: red;">연이은 띄어쓰기는 공백 1칸으로 인식</h3>
+    <h3 style="color: hotpink;">엔터는 줄바꿈 x -> 공백 1칸</h3>
+
+    <hr>
+
+    <h1>html에서 엔터/띄어쓰기를 나타내는 태그/특수문자</h1>
+    <h3>1.엔터 : br(line break)태그</h3>
+    A<br><br><br>B
+
+    <h3>2.띄어쓰기 : &nbsp; </h3>
+    A&nbsp;&nbsp;&nbsp;&nbsp;B
+
+    <h3>3. pre(PREformatted, 사전 형식 지정) 태그</h3>
+    <pre>
+        pre 태그 내부에 
+        작성된 형태 그대로
+        브라우저 화면에 출력하는 태그
+
+
+
+        @@ $$ !! ***
+    </pre>
+
+    <hr>
+
+    <h3>p(Paragraph) 태그: 단락</h3>
+    <p>
+        글을 작성하는 용도의 태그
+    </p>
+
+    <p>
+        pre 태그처럼
+        형식이 유지되지 않음
+    </p>
+
+    <p>
+        글의 주제가 바뀔 때 마다 p태그를 새로 작성된
+        <br>
+        <br>
+        문단(p태그) 사이에 여백이 생성됨
+    </p>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <h1>글자에 적용되는 태그</h1>
+
+    <b>b(bold) 태그: 단순히 글자를 굵게 표시하는 태그</b>
+
+    <br>
+
+    <i>i(italic) 태그 : 단순히 글자를 기울여 표시하는 태그</i>
+
+    <hr>
+
+    <strong>strong 태그 : 글자(단어)를 강조하는 용도의 태그</strong>
+
+    <br>
+
+    <em>em 태그 : 문장의 맥락을 변화시키는 태그(강조)</em>
+
+    <pre>
+        * 웹 접근성 이란?
+        -   일반인 뿐만 아니라 
+            장애인, 고령자들을 위해
+            웹사이트에서 제공하는 모든 서비스를
+            이용할 수 있도록 보장하는 것
+            (웹 개발 의무 사항)
+    </pre>
+
+    <hr>
+
+    <pre>
+        mark 태그 : <mark>형광펜 효과</mark>를 주는 태그
+
+        u(under) 태그 : <u>밑줄 긋는 태그</u>
+
+        s 태그: <s>글자 가운데 선을 긋는 태그(취소, 오타)</s>
+        
+        del 태그 : <del>삭제선을 긋는 태그(있다가 없어짐)</del>
+
+        * s, del 용도에 맞게 사용!
+        걸그룹 멤버 명단: <del>미영</del>(탈퇴), 숙희, <s>영희</s> 영숙
+
+        small 태그 : <small>글자를 작게</small> 표시하는 태그
+
+        sup 태그(윗첨자) : x<sup>3</sup>
+
+        sub 태그(아랫첨자) : log<sub>2</sub>
+
+        abbr(abbreviation : 약어) 태그 : 마우스 오버 시 툴팁 제공
+        <abbr title="Hyper Text Transfer Protocol">HTTP</abbr>
+
+        <abbr title="Hyper Text Markup Language">HTML</abbr>
+
+    </pre>
+
+    <h3>글자 관련 태그 연습</h3>
+    <p>
+
+        <mark>태그</mark>들은 해당 태그 내에서 중첩으로 사용 가능하다. <br>
+        <strong>굵은</strong> 글자를 사용할 수도 있고, <em>기울이거나</em>, <s>취소선</s>을 넣는 등 <br>
+        다양하게 사용할 수 있다.
+
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04_표 관련 태그</title>
+  <style>
+    /* CSS주석 */
+
+    /* 문서 내에서 thead 태그를 모두 찾아서 선택*/
+    thead {
+      background-color: yellow;
+    }
+
+    tbody {
+      background-color: skyblue;
+    }
+
+    tfoot {
+      background-color: magenta;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>table 관련 태그</h1>
+
+  <ol>
+    <li>
+      <h4>table(표) 태그</h4>
+      <pre>
+            - 웹 문서에서 
+            자료를(data) 정리하기 위해
+            사용하는 태그
+            
+            - table 태그는
+            행, 열을 작성하기 위한
+            영역(판)을 지정하는 태그
+            </pre>
+    </li>
+    <li>
+      <h4>tr(Table Row) 태그</h4>
+      <pre>
+            - 테이블의 한 행을 나타내는 태그                
+            </pre>
+    </li>
+
+    <li>
+      <h4>td(Table Data) 태그</h4>
+      <pre>
+            - 테이블의 출력될 값(데이터)를
+            작성하는 태그
+
+            - 각 행의 열(colum) 역할
+                == Excel의 한 cell(한 칸)과 동일
+            </pre>
+    </li>
+    <li>
+      <h4>th(Table Header) 태그</h4>
+      <pre>
+                - 열의 제목을 나타내는 태그
+
+                - td와 같은 레벨로 작성(td 대신 th작성 가능)
+
+                - 굵은 글씨 + 가운데 정렬 
+            </pre>
+    </li>
+    <li>
+      <h4>caption 태그</h4>
+      <pre>
+                - 표 또는 이미지에 설명을 작성하는 태그
+            </pre>
+    </li>
+    <li>
+      <h4>thead 태그</h4>
+      <pre>
+                - 테이블 상단 영역(컬럼 제목 영역)
+            </pre>
+    </li>
+    <li>
+      <h4>tbody 태그</h4>
+      <pre>
+                - 테이블 중단 영역(값 적성 영역)
+            </pre>
+    </li>
+    <li>
+      <h4>tfoot 태그</h4>
+      <pre>
+                - 테이블 하단 영역(합계 작성 녕역
+            </pre>
+    </li>
+
+    <li>
+      <h4>colspan(열 병합) 속성</h4>
+      <pre>
+                - 열로 나열된 방향(가로, 옆) 병합
+            </pre>
+    </li>
+    <li>
+      <h4>rowspan(행 병합) 속성</h4>
+      <pre>
+                - 행으로 나열된 방향(세로, 위/아래) 병합
+            </pre>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3>테이블 연습</h3>
+
+  <!-- border-collapse: collapse; => 테두리 사이 여백제거 -->
+  <table border="1" style="border-collapse: collapse;">
+    <!-- 1행(row) -->
+    <tr>
+      <td>1행1열</td>
+      <td>1행2열</td>
+      <td>1행3열</td>
+    </tr>
+    <!-- 2행(row) -->
+    <tr>
+      <td>2행1열</td>
+      <td>2행2열</td>
+      <td>2행3열</td>
+    </tr>
+    <!-- 3행(row) -->
+    <tr>
+      <td>3행1열</td>
+      <td>3행2열</td>
+      <td>3행3열</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h3>테이블 연습 2</h3>
+  <table border="1">
+    <!-- caption-side 캡션 위치 지정 -->
+    <caption style="caption-side: bottom;">짱구는 못말려 등장인물</caption>
+    <tr>
+      <th>번호</th>
+      <th>이름</th>
+      <th>성별</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>짱구</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>수지</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>맹구</td>
+      <td>F</td>
+    </tr>
+  </table>
+
+
+  <hr>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>주소</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>홍길동</td>
+        <td>25세</td>
+        <td rowspan="3">서울시 중구</td>
+      </tr>
+      <tr>
+        <td>김미영</td>
+        <td>32세</td>
+
+      </tr>
+      <tr>
+        <td>김철수</td>
+        <td>24세</td>
+
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>인원 수</th>
+
+        <td colspan="2">3명</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
