@@ -1,7 +1,52 @@
 /* 일반 구조 선택자(위치 기준) */
 
 /* :first-child -> 첫 번째 위치한 요소가 맞으면 선택 */
+/* 선택자 해석을 역방향으로 해야함 */
 #test1 > p:first-child {
     background-color: red;
     color: white;
+}
+#test1 > p:last-child {
+    background-color: gold;
+    color: red;
+}
+/* :nth-child(숫자) -> n번째로 위치한 요소가 맞으면 선택 */
+#test1 > p:nth-child(3) {
+    background-color: blue;
+    color: white;
+}
+/* :nth-child(수열) -> 수열 번째 위치한 요소가 맞으면 선택 */
+/* n : 0 이상의 양의 정수(0,1,2,3,4...) */
+#test1 > p:nth-child(2n) {
+    background-color: orange;
+    color: white;
+}
+/* :nth-last-child() -> 뒤에서 n번째 위치한 요소가 맞으면 선택 */
+#test1 > p:nth-last-child(4) {
+    background-color: pink;
+}
+
+/* 형태 구조 선택자 */
+/* :first-of-type */
+#test2 > p:first-of-type {
+    background-color: blue;
+    color: white;
+}
+
+#test2 > p:last-of-type {
+    background-color: red;
+    color: white;
+}
+
+#test2 > p:nth-of-type(2n) {
+    background-color: orange;
+}
+
+#test2 > p:nth-last-of-type(3n) {
+    background-color: greenyellow;
+}
+
+/* 부정 선택자(not */
+#test3 > li:not(:nth-child(3n)) {
+    background-color: pink;
 }

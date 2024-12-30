@@ -1,0 +1,72 @@
+/* :only-child -> 자식이 하나만 있을 때 선택 */
+
+/* #test1 요소의 유일한 자식이 p태그인 경우 선택 */
+#test1 > p:only-child {
+    background-color: red;
+}
+
+/* :only-of-type */
+/* #test2의 자식중에 p가 하나만 있을 때 선택 */
+#test2 > p:only-of-type {
+    background-color: green;
+}
+
+/* #test2의 자식중에 pre가 하나만 있을 때 선택 */
+#test2 > pre:only-of-type {
+    background-color: yellow;
+}
+
+/* :empty */
+#test3:empty {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+/* 여러 선택자 지정 */
+#test4a,
+#test4b,
+#test4c,
+#test4d {
+    border: 1px solid red;
+    border-radius: 12px;
+    background-color: gold;
+    text-align: center;
+}
+
+/* 여러 클래스가 작성된 요소 선택하기 */
+.test6 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+/* 쭉 이어서 작성!!,
+    띄어쓰기 == 후손 선택자 --> 띄어쓰기 조심! */
+.test6.aaa {
+    font-size: 24px;
+}
+.test6.aaa.bbb {
+    color: red;
+}
+.aaa {
+    font-size: 30px;
+    color: pink;
+    font-weight: bold;
+}
+
+/* 다른 태그, 같은 클래스 요소 구분하기 */
+.test7 {
+    width: 100px;
+    height: 50px;
+    border: 3px solid gray;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+div.test7 {
+    color: green;
+}
+
+section.test7 {
+    color: red;
+}
