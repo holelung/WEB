@@ -1,0 +1,7 @@
+/* 일반 구조 선택자(위치 기준) */
+
+/* :first-child -> 첫 번째 위치한 요소가 맞으면 선택 */
+#test1 > p:first-child {
+    background-color: red;
+    color: white;
+}
