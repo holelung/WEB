@@ -1,0 +1,169 @@
+@font-face {
+    /* 웹 폰트 */
+    font-family: "Mungyeong-Gamhong-Apple";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/Mungyeong-Gamhong-Apple.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    /* width/height 지정한 값이
+    content + padding + border 값이 되도록
+    content 크기를 자동 조정하는 속성
+    -> 개발자 의도대로 요소 크기를 쉽게 지정가능
+  */
+    box-sizing: border-box;
+    /* html 요소는 기본적으로 설정된 padding, margin이 있는 요소가 존재
+      -> 개발자 의도대로 요소 배치가 안되는 문제가 생길 수 있다
+      -> 0으로 초기화
+    */
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* relative, absolute 확인 */
+
+div {
+    border: 1px solid black;
+}
+
+/* 감싸는 요소 */
+.container-1 {
+    width: 304px;
+    height: 304px;
+    border: 2px solid red;
+    margin: 30px;
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.container-1 > div {
+    border-radius: 50%;
+}
+
+/* first div */
+.container-1 > :nth-child(1) {
+    width: 220px;
+    height: 220px;
+    background-color: skyblue;
+    text-align: center;
+
+    position: absolute;
+    top: 40px; /* 위쪽 테두리에서 40px만큼 떨어저 */
+    left: 40px;
+}
+/* second div */
+.container-1 > :nth-child(2) {
+    width: 140px;
+    height: 140px;
+    background-color: red;
+    text-align: center;
+
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+/* third div */
+.container-1 > :nth-child(3) {
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    text-align: center;
+
+    position: absolute;
+    top: 120px;
+    left: 120px;
+}
+
+/* z-index 확인 */
+.container-2 {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    position: relative; /* 기준점 */
+}
+
+.container-2 > div:nth-child(1) {
+    background-color: red;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    z-index: 10;
+}
+.container-2 > div:nth-child(2) {
+    background-color: orange;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+
+    z-index: 9;
+    right: 0;
+}
+.container-2 > div:nth-child(3) {
+    background-color: yellow;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+}
+.container-2 > div:nth-child(4) {
+    background-color: green;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+
+    z-index: 6;
+    bottom: 0;
+}
+
+.top-btn-container {
+    border: 3px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    z-index: 99;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.top-btn {
+    color: black;
+    text-decoration: none;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    font-weight: bold;
+    font-size: 18px;
+
+    text-align: center;
+    line-height: 43px; /* 줄 간격 */
+    /* 줄 간격 보다 글자 크기가 작으면 세로 가운데 배치 */
+}
+
+.sticky {
+    background-color: purple;
+    color: white;
+
+    font-family: "Mungyeong-Gamhong-Apple";
+    font-size: 42px;
+    padding: 100px 20px 30px;
+    margin-bottom: 10px;
+
+    /* 요소가 화면을 벗어나는 순간 fixed */
+    position: sticky;
+    top: -70px;
+    z-index: 100;
+}
