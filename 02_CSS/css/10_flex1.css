@@ -1,0 +1,49 @@
+.flex-container {
+    height: 800px;
+
+    display: flex;
+    /* 감싸는 요소(flex-container)가 display : flex로 지정된 경우
+      바로 아래 자식 요소(item)들의
+      display : block, inline, inline-block의 특징을 모두 잃고
+      중심축 방향에 맞게 정렬 + 크기 지정이 가능한 상태가 됨
+    */
+
+    /* flex-direction : 중심축 방향을 지정 
+      item은 중심축의 방향에 맞게 배치된다.
+      row, row-reverse, column, column-reverse
+    */
+    flex-direction: row;
+
+    /* justify-content : 중심축 방향 item 정렬 지정 */
+    /* flex-start, flex-end, center */
+    /* 
+      space-around: item기준 item의 주위에 공간
+      space-between: item 사이의 공간
+      space-evenly: item 양옆에 동일한 공간
+    */
+    justify-content: space-between;
+
+    /* align-items : 교차축 방향으로 item 묶음 정렬 */
+    /* 기본값 : stretch -> item을 교차축 방향으로 늘린다. 단, 교차축 방향으로 크기 지정이 없을 경우*/
+    /* flex-start, flex-end, center*/
+
+    /* 글자가 한 라인에 배치되도록 item 위치 수정*/
+    align-items: baseline;
+}
+
+.item2 {
+    padding: 5px;
+}
+
+.item3 {
+    padding: 10px;
+}
+.item4 {
+    padding: 15px;
+}
+.item5 {
+    padding: 20px;
+}
+.item5 {
+    padding: 25px;
+}
