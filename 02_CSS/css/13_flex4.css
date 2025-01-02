@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div {
+    border: 1px solid black;
+}
+
+h1,
+h3 {
+    margin: 10px 5px;
+    text-decoration: underline;
+}
+
+/* 상하 2분할 */
+.container-1 {
+    width: 500px;
+    height: 600px;
+    margin: 20px;
+}
+.container-1 > div {
+    width: 100%;
+    height: 50%;
+}
+.container-1 > div:first-child {
+    background-color: yellow;
+}
+.container-1 > div:last-child {
+    background-color: yellowgreen;
+}
+
+.container-2 {
+    width: 300px;
+    height: 432px;
+    margin: 20px;
+}
+/* div -> display:block 
+  == 한 행을 모두 차지한다 (width: 100%가 기본값이다)
+*/
+.container-2 > div:first-child {
+    height: 50%;
+    background-color: yellow;
+}
+.container-2 > div:nth-child(2) {
+    height: 30%;
+    background-color: aquamarine;
+}
+.container-2 > div:last-child {
+    height: 20%;
+    background-color: blueviolet;
+}
+
+.container-3 {
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    /* 내부 요소를 유연하게 배치, 정렬하겠다고 선언 */
+    display: flex;
+    /* 중심축 방향으로 row(l -> r) */
+    flex-direction: row;
+}
+.container-3 > div {
+    height: 100%;
+}
+
+.container-3 > div:first-child {
+    flex: 1;
+    background-color: blueviolet;
+}
+.container-3 > div:last-child {
+    flex: 1;
+    background-color: blue;
+}
+
+/* 가로 5분할 */
+.container-4 {
+    width: 600px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    /* align-items:stretch 교차축 기본값 */
+}
+
+.container-4 > div:nth-child(2n-1) {
+    flex: 1;
+    background-color: yellow;
+}
+.container-4 > div:nth-child(2n) {
+    flex: 3.5;
+    background-color: chocolate;
+}
+
+/* 창문모양 */
+.container-5 {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.container-5 > .row {
+    background-color: green;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.container-5 > .row > div {
+    background-color: skyblue;
+    flex: 1;
+}
