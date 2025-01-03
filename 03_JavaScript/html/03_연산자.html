@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_연산자</title>
+  <link rel="stylesheet" href="../css/03_연산자.css">
+</head>
+
+<body>
+  <h1>연산자(Operator)</h1>
+
+  <h3>산술 연산자</h3>
+  <pre>
+    기본 사칙 연산 : +,-,*,/
+    %(modulo, mod) : 나머지를 구하는 연산자
+  </pre>
+
+  <div class="calculator">
+    <div class="row">
+      <!-- label for ="" :
+      for안의 값으로 id는 가지는 요소의 제목이 되겠다. -->
+      <label for="input1">첫 번째 값</label>
+      <input type="number" id="input1">
+    </div>
+    <div class="row">
+      <label for="input2">두 번째 값</label>
+      <input type="number" id="input2">
+    </div>
+    <div class="row btn-row">
+      <!-- button 태그의 type 기본값 submit 
+        -> form태그로 감싸져 있지 않으면 아무런 제출 효과 X
+        (form 밖에 있으면 일반 버튼)
+      -->
+      <button onclick="plusBtn()">+</button>
+      <button onclick="subBtn()">-</button>
+      <button onclick="multiBtn()">*</button>
+      <button onclick="divBtn()">/</button>
+      <button onclick="modBtn()">%</button>
+    </div>
+    <div class="row">
+      <h2>결과 : <span id="calcResult">0</span></h2>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <h3>산술 연산자 응용</h3>
+  <!-- 개발 공부 시 가장 중요한거
+    - 개념 이해
+    - 응용
+  -->
+
+  <!-- 계산기 2 -->
+  <div class="calculator">
+    <div class="row">
+      <label for="input3">첫 번째 값</label>
+      <input type="number" id="input3">
+    </div>
+    <div class="row">
+      <label for="input4">두 번째 값</label>
+      <input type="number" id="input4">
+    </div>
+    <div class="row btn-row btn2">
+      <button onclick="doubleBtn()">첫 번째 값 X2</button>
+      <button onclick="squareBtn()">두 번쨰 값 ^2</button>
+      <button onclick="allOperationBtn()">모든 연산 결과 일괄 출력</button>
+    </div>
+    <div class="row">
+      <h2>결과 : <span id="calcResult2">0</span></h2>
+    </div>
+  </div>
+
+  <hr>
+  <h1>증가/감소 연산자</h1>
+  <pre>
+    1씩 값을 증가 감소 시키는 연산자
+
+    합쳐서 증감연산자
+
+    단항 연산자의 한 종류(연산자가 적용될 숫자가 1개)
+    
+    * 전위 연산 
+    ++변수, --변수
+    * 후위 연산
+    변수++, 변수--
+
+  </pre>
+
+  <div>
+    <button onclick="subFnc()">-1</button>
+    <span id="countResult">0</span>
+    <button onclick="addFnc()">+1</button>
+  </div>
+  <script src="../js/03_연산자.js"></script>
+</body>
+
+</html>
