@@ -1,6 +1,6 @@
 function createTable() {
-  let start = Number(document.getElementById("start").value);
-  let end = Number(document.getElementById("end").value);
+  let start = document.getElementById("start").value;
+  let end = document.getElementById("end").value;
 
   let thead = document.getElementById("thead");
   let tbody = document.getElementById("tbody");
@@ -14,11 +14,17 @@ function createTable() {
 
   // 시작 또는 종료 입력 x
   if (start == "" || end == "") {
+    console.log(start, end);
     alert("시작/종료 단을 입력 해주세요");
     return;
   }
+
+  // 공백 값 확인 이후 Number로 변환
+  // value 받을 때 Number로 변환하면 공백을 0으로 변환해서 공백 입력 체크 못함
+  start = Number(start);
+  end = Number(end);
   // 시작 또는 종료 음수입력
-  if (start < 0 || end < 0) {
+  if (start <= 0 || end <= 0) {
     alert("1이상의 수 를 입력 해주세요");
     return;
   }
@@ -29,10 +35,12 @@ function createTable() {
   }
 
   // thead 생성
+  theadResult = `<tr>`;
   for (let i = start; i <= end; i++) {
     theadResult += `<th>${i}단</th>`;
   }
-
+  theadResult += `</tr>`;
+  // tbody 생성
   for (let i = 1; i <= 9; i++) {
     tbodyResult += `<tr>`;
     for (let j = start; j <= end; j++) {
