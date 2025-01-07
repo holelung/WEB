@@ -1,5 +1,5 @@
 {
-    "editor.tabSize": 2,
-    "cSpell.words": ["Batis", "JDBC"],
-    "html-to-css-autocompletion.autocompletionFilesScope": "linked-files"
+  "editor.tabSize": 2,
+  "cSpell.words": ["Batis", "donkkaseu", "gimbap", "JDBC"],
+  "html-to-css-autocompletion.autocompletionFilesScope": "linked-files"
 }
