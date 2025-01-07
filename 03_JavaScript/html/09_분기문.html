@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_분기문</title>
+</head>
+
+<body>
+  <h1>분기문</h1>
+  <pre>
+    - 반복문 수행중
+    1) 현재 반복을 멈춤       :break
+    2) 다음 반복으로 넘어감    :continue
+
+    - 분기문은 가장 가까운(감싸고 있는)
+      반복문에 적용된다
+  </pre>
+
+  <h4>break 확인</h4>
+  <button onclick="check1()">break확인</button>
+
+  <hr>
+
+  <h4>무한반복 멈추기</h4>
+  <button onclick="check2()">무한반복 멈추기</button>
+
+  <hr>
+  <h4>무한반복 멈추기2</h4>
+  <button onclick="check3()">무한반복 멈추기2</button>
+
+
+  <hr>
+
+  <h4>중첩 반복문에서 break사용</h4>
+  <button onclick="check4()">check</button>
+
+  <hr>
+  <h4>continue 확인하기</h4>
+  <button onclick="check5()">확인하기</button>
+
+  <hr>
+  <h4>continue 확인ㅏ기</h4>
+  <button onclick="check6()">확인하기2</button>
+
+
+  <hr>
+  <h1>UP & DOWN 게임</h1>
+  <pre>
+    1-200 사이 난수를 몇회 만에 맞추는지 카운트 하는 게임
+    
+    조건 1. prompt를 이용해서 숫자 입력을 받기
+      - 미입력한 경우 : alert("다시 입력해주세요") -> 카운트 증가 x
+      - 잘못입력한 경우(1~200사이X,) : alert("1~200사이 숫자만 입력")-> 카운트증가 x
+
+      - 취소를 누른 경우 : 포기로 간주 alert("count 번째에서 포기. 정답 answer"); break;
+
+    조건 2. 7회 까지만 입력 허용 7회 초과시 실패
+    alert("7회 초과로 실패! 정답 answer");
+
+    조건 3. 입력받은 수가 난수 보다 높거나 낮을 경우
+      높 -> Down(현재 남은 횟수:)
+      낮 -> Up(현재 남은 횟수:)
+      카운트 +1
+
+    조건 4. 정답인 경우:
+      alert(정답! / 시도횟수)
+      return or break;
+  </pre>
+  <div>
+    <label for="startBtn">UP & DOWN 게임</label>
+    <button id="startBtn" onclick="startGame()">게임 시작</button>
+  </div>
+
+
+  <script src="../js/09_분기문.js"></script>
+</body>
+
+</html>
