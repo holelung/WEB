@@ -42,7 +42,7 @@
     
 
     4. name 속성을 이용한 접근
-      - document.getElementsByName("name of name");
+      - document.getElementsByName("name 속성명");
 
       - name 속성 값이 일치하는 모든 요소를 얻어와 (유사)배열 형태로 변환
 
@@ -50,7 +50,7 @@
       - document.querySelector("CSS 선택자");
         -> 선택자가 일치하는 요소 중 [첫 번째] 요소만 변환
 
-      - querySelectorAll("CSS 선택자")
+      - querySelectorAll("CSS 선택자");
         -> 선택자가 일치하는 요소(모두)를 얻어와 (유사)배열 형태로 변환
 
     
@@ -109,7 +109,6 @@
   </ul>
   <button onclick="tagNameTest()">배경색 변경</button>
 
-
   <hr>
   <h3>name 속성으로 요소 접근하기</h3>
   <pre>
@@ -152,7 +151,7 @@
       </td>
     </tr>
   </table>
-  <div class="name-result">선택한 취미 출력</div>
+  <div class="name-result" id="nameResult">선택한 취미 출력</div>
   <button onclick="nameTest()">선택한 취미만 출력하기</button>
 
   <script src="../js/11_요소접근방법.js"></script>
