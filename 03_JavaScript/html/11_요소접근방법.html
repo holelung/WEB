@@ -154,6 +154,35 @@
   <div class="name-result" id="nameResult">선택한 취미 출력</div>
   <button onclick="nameTest()">선택한 취미만 출력하기</button>
 
+  <hr>
+  <h1>CSS 선택자를 이용한 요소 접근 방법</h1>
+  <!-- target-div 라는 속성은 HTML의 기본속성이 아님.
+      만들어 낸 속성 -->
+  <div target-div="css-div">
+    <div>test1</div>
+    <div>test2</div>
+  </div>
+
+
+  <button onclick="cssTest()">css 선택자를 이용한 요소 접근</button>
+
+
+  <h3>
+    채탱 앱
+  </h3>
+  <div class="chatting">
+    <div id="chattingBg">
+      <!-- 
+      <p>
+        <span> ㄱㄴㄷ</span>
+      </p> 
+      -->
+    </div>
+    <div id="chattingInput">
+      <input type="text" id="userInput">
+      <button onclick="readValue()">전송</button>
+    </div>
+  </div>
   <script src="../js/11_요소접근방법.js"></script>
 </body>
 

@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.my-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  border: 3px solid green;
+  border-radius: 15px;
+
+  color: green;
+  font-weight: bold;
+  font-family: "고딕";
+
+  cursor: pointer;
+  user-select: none; /* 선택(블럭) 불가 */
+}
+
+.my-btn:hover {
+  color: white;
+  background-color: green;
+}
+
+.my-btn:active {
+  scale: 0.98;
+}
+
+#test1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  color: white;
+  background-color: red;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.test2 {
+  border: 2px solid black;
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+}
+
+#result2 {
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  align-self: center;
+}
+
+.btn-container {
+  width: 100%;
+  border-top: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.btn-container > button {
+  width: 70px;
+  height: 30px;
+  margin: 5px;
+}
+
+/* 실습 문제 */
+.practice-container,
+.practice-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.practice-container {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+}
+.display {
+  width: 150px;
+  height: 150px;
+  border-bottom: 1px solid grey;
+}
+.inputColor {
+  width: 150px;
+  height: 30px;
+  border: none;
+  padding: 2px;
+}

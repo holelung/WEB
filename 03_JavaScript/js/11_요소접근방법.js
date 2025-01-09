@@ -58,3 +58,71 @@ function nameTest() {
   const div = document.getElementsByClassName("name-result");
   div[0].innerHTML = result;
 }
+
+function cssTest() {
+  // target-div 속성 값이 css-div인 요소 하나 선택
+  const container = document.querySelector("[target-div=css-div]");
+
+  container.style.width = "200px";
+  container.style.height = "200px";
+  container.style.border = "10px solid orange";
+
+  // document.querySelector("css 선택자")
+  // 여러 요소가 선택된 경우 "첫 번째" 요소만 얻어옴
+
+  const first = document.querySelector("[target-div=css-div]>div");
+  console.log(first);
+  first.style.color = "red";
+  first.style.fontSize = "30px";
+
+  // document.querySelectorAll("css 선택자");
+  const divs = document.querySelectorAll("[target-div=css-div] > div");
+
+  console.log(divs);
+  const colors = ["yellow", "pink"]; // 배열 선언 및 초기화
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].style.height = "50";
+    divs[i].style.display = "flex";
+    divs[i].style.justifyContent = "center";
+    divs[i].style.alignContent = "30";
+  }
+}
+
+//  카카오톡
+
+function readValue() {
+  // 채팅이 출력 되는 화면 요소 선택
+  const bg = document.querySelector("#chattingBg");
+  // input
+  const input = document.querySelector("#userInput");
+
+  // 입력된 값이 없을 경우
+  // 아무 값도 입력 x
+  //  - 작성된 내용이 공백문자(띄어쓰기, 탭, 엔터)만 있을 경우
+
+  // * "string".trim() : 문자열 좌우 공백 제거
+
+  if (input.value.trim().length === 0) {
+    alert("채팅 내용을 입력 해주세요");
+    input.value = "";
+    input.focus(); //input 요소 활성화
+    return;
+  }
+
+  // 입력된 값을 읽어와 채팅 화면에 누적
+  bg.innerHTML += `<p><span>${input.value}</span></p>`;
+  input.value = "";
+  input.focus();
+
+  // 채팅화면에 스크롤을 제일 아래로 이동
+  // 요소.scrollHeight
+  // 요소.scrollTop
+  // 요소.scrollTop = "값px";
+  bg.scrollTop = bg.scrollHeight;
+}
+
+document.querySelector("#userInput").addEventListener("keydown", function (e) {
+  if (e.key == "Enter") {
+    readValue();
+  }
+});
