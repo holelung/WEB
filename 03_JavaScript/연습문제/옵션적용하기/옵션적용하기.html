@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>옵션 적용하기</title>
+  <link rel="stylesheet" href="./옵션적용하기.css">
+</head>
+
+<body>
+  <div class="container">
+    <form action="">
+      <table>
+        <tr>
+          <th><label for="width">너비 : </label></th>
+          <td class="options"><input type="number" id="width"> px</td>
+          <th><label for="height">높이 :</label></th>
+          <td class="options"><input type="number" id="height"> px</td>
+        </tr>
+        <tr>
+          <th><label for="fontSize">글자 크기 :</label></th>
+          <td class="options"><input type="number" id="fontSize"> px</td>
+          <th><label for="fontWeight">굵기 :</label></th>
+          <td class="options">
+            보통<input type="radio" id="fontWeight" name="font-weight" value="normal" checked>
+            굵게<input type="radio" id="fontWeight" name="font-weight" value="bold">
+          </td>
+        </tr>
+        <tr>
+          <th><label for="color">글자색 :</label></th>
+          <td class="options"><input type="text" id="color"></td>
+          <th><label for="fontWeight">배경색 :</label></th>
+          <td class="options"><input type="text" id="bgColor"></td>
+        </tr>
+        <tr>
+          <th><label for="alignRow">가로정렬 :</label></th>
+          <td class="options">
+            왼쪽<input type="radio" id="alignRow" name="justify-content" value="left">
+            가운데<input type="radio" id="alignRow" name="justify-content" value="center" checked>
+            오른쪽<input type="radio" id="alignRow" name="justify-content" value="right">
+          </td>
+        </tr>
+        <tr>
+          <th><label for="alignColumn">세로정렬 :</label></th>
+          <td class="options">
+            위<input type="radio" id="alignColumn" name="align-items" value="start">
+            가운데<input type="radio" id="alignColumn" name="align-items" value="center" checked>
+            아래<input type="radio" id="alignColumn" name="align-items" value="end">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="string">출력 문자열 :</label></td>
+          <td colspan="3" class="options"><input type="text" id="string" name="innerText"></td>
+        </tr>
+      </table>
+    </form>
+    <button id="applyBtn">적용하기</button>
+    <div class="box"></div>
+  </div>
+
+
+  <script src="./옵션적용하기.js"></script>
+</body>
+
+</html>
