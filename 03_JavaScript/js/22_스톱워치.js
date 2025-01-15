@@ -42,22 +42,26 @@ function timeTable() {
   time[1] = Math.floor((count % 6000) / 100); // 초
   time[2] = count % 100; // 1/100 초
 
-  if (time[0] < 10) {
-    time[0] = 0 + String(time[0]);
-  }
-  if (time[1] < 10) {
-    time[1] = 0 + String(time[1]);
-  }
-  if (time[2] < 10) {
-    time[2] = 0 + String(time[2]);
-  }
+  time.forEach((t, i, time) => {
+    time[i] = attachZero(t);
+  });
+
   return time;
+}
+
+function attachZero(num) {
+  if (num < 10) {
+    return "0" + num;
+  }
+  return num + "";
 }
 
 // #display에 시간 표시
 function displayTime(times) {
   times.forEach((time, i) => {
-    timeList[i].innerText = time;
+    if (timeList[i].innerText !== time) {
+      timeList[i].innerText = time;
+    }
   });
 }
 
