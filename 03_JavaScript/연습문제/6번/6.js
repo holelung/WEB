@@ -55,12 +55,18 @@ modifyBtn.addEventListener("click", () => {
     menu.querySelector(":nth-child(4)").classList.remove("menu-none");
     menu.querySelector(":last-child").classList.remove("menu-none");
 
-    // 기존 메뉴값 input에 대입
+    // 기존 메뉴값 input에 대입 (삼항 연산자)
+    // 메뉴명
     menu.querySelector(":nth-child(4)").value =
-      menu.querySelector(":first-child").innerText;
-    menu.querySelector(":last-child").value = menu
-      .querySelector(":nth-child(2)")
-      .innerText.replace("원", "");
+      menu.querySelector(":first-child").innerText === "미입력"
+        ? ""
+        : menu.querySelector(":first-child").innerText;
+
+    // 가격
+    menu.querySelector(":last-child").value =
+      menu.querySelector(":nth-child(2)").innerText === "0원"
+        ? ""
+        : menu.querySelector(":nth-child(2)").innerText.replace("원", "");
   });
 });
 
@@ -117,3 +123,50 @@ removeBtn.addEventListener("click", () => {
     item.parentElement.remove();
   });
 });
+
+// 번외편
+/* 
+  html에 input을 미리 만들어두지 않고
+  수정을 클릭할 때 마다, span을 없애고 input을 생성
+  종료를 클릭할 때 마다, input을 없애고 span을 생성
+  하는 방식을 사용할 때
+  사용하면 좋은 함수
+*/
+
+/* 요소 생성 + 속성 추가 + 클래스 추가 함수 */
+function newEl(tag, attr, cls) {
+  const el = document.createElement(tag);
+  // attr 매개 변수는 객체 형태
+  for (let key in attr) {
+    el.setAttribute(key, attr[key]);
+  }
+  // cls 매개 변수는 배열 형태
+  for (let className of cls) {
+    // 클래스 추가
+    el.classList.add(className);
+  }
+  return el;
+}
+/* 메뉴 내부 체크박스 요소를 만들어 객체로 반환하는 함수 */
+function createMenuContent() {
+  // 체크박스 생성
+  const check = newEl("input", { type: "checkbox" }, ["menu-check"]);
+
+  // 메뉴명 input 생성
+  const menuNameInput = newEl(
+    "input",
+    { type: "text", placeholder: "메뉴명" },
+    ["menu-name-input"]
+  );
+
+  // 메뉴 가격 input 생성
+  const menuPriceInput = newEl("input", { type: "text", placeholder: "가격" }, [
+    "menu-price-input",
+  ]);
+
+  return {
+    check: check,
+    menuNameInput: menuNameInput,
+    menuPriceInput: menuPriceInput,
+  };
+}
