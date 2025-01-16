@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23_요소 속성 다루기</title>
+  <link rel="stylesheet" href="../css/23_요소속성다루기.css">
+</head>
+
+<body>
+  <h1>요소 속성(Attribute) 관련 메서드</h1>
+
+  <pre>
+    1. 요소.getAttribute("속성명") : 속성 값 얻어오기
+
+    2. 요소.setAttribute("속성명", "속성값") :
+      요소에 새로운 속성 추가(같은 속성이 존재하면 덮어쓰기)
+
+    3. 요소.removeAttribute("속성명") : 속성 제거하기
+
+    4. 요소.hasAttribute("속성명") : 속성 존재여부 확인
+      -> true, false 반환
+  </pre>
+
+  <input id="input1" name="nameTest">
+  <button id="btn1">속성 관련 메서드 확인</button>
+  <button id="btn2">속성 관련 메서드 확인2</button>
+
+
+  <hr>
+  <h1>요소 속성에 직접 접근</h1>
+  <pre>
+    - DOM 요소 노출되어 있는 속성은 
+      "요소.속성명" 으로 얻어오기/세팅하기 모두 가능!
+
+    * 직접 접근 방법
+    [장점]
+    1. 짧고 간결
+    2. Attribute() 관련 메서드보다 속도적 우위
+    3. 표준 HTML에 대해 직접 접근 가능
+      -> HTML 요소가 실제로 제공하는 속성을 다룰 수 있다.
+    
+    [단점]
+    1. DOM 요소별 속성 파악이 필요
+    2. 일관성 부족
+  </pre>
+
+  <input type="text" id="input2" value="input2 입니다." name="nameTwo">
+  <div id="div2" class="a b c">div2 입니다.</div>
+  <button id="btn3">요소 직접 접근 확인</button>
+
+  <hr>
+  <h1>class 관련 속성(classList)</h1>
+  <pre>
+    * class 속성 
+    1) 모든 HTML 요소가 가질 수 있는 속성
+    2) 중복 가능
+    3) 한 요소가 여러 클래스를 가질 수 있다
+
+    * 요소.classList
+    1) `요소.classList.add("class1" [, "class2", "class3", ...])`
+    - 요소에 class 추가( 여러 클래스 한 번에 추가 가능)
+    - 요소에 class가 존재하고 있으면 이어서 추가
+
+    2) 요소.classList.remove("class1" [, ...])
+
+    3) 요소.classList.toggle("class1")
+
+    4) 요소.classList.contains("class")
+
+    5) 요소.classList.replace("기존 class","새 class")
+  </pre>
+
+  <div class="color-btn-container">
+    <button class="btn">red</button>
+    <input type="checkbox" class="btn-checkbox hidden">
+    <input type="text" class="input-color hidden">
+
+    <button class="btn">yellow</button>
+    <input type="checkbox" class="btn-checkbox hidden">
+    <input type="text" class="input-color hidden">
+
+    <button class="btn">green</button>
+    <input type="checkbox" class="btn-checkbox hidden">
+    <input type="text" class="input-color hidden">
+  </div>
+
+  <div class="container-3">
+    <button id="modBtn">수정</button>
+    <div class="btn-container hidden">
+      <button id="addBtn" class="bg-green">추가</button>
+      <button id="removeBtn">삭제</button>
+      <button id="closeBtn">종료</button>
+    </div>
+  </div>
+  <script src="../js/23_요소속성다루기.js"></script>
+</body>
+
+</html>

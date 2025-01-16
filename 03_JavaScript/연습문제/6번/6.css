@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+main {
+  width: 900px;
+  margin: 50px auto;
+}
+
+/* 제목 영역 */
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#resTitle {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0 5px;
+  cursor: pointer;
+  user-select: none;
+}
+#resTitleInput {
+  font-size: 32px;
+  margin: 0 5px;
+}
+
+/* 메뉴 영역 */
+.menu-container {
+  height: 300px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 10px;
+  list-style: none;
+  overflow: scroll;
+}
+.menu {
+  width: 33.3%;
+  height: 20%;
+  font-size: 20px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu > input {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.menu > input[type="text"] {
+  flex-grow: 1;
+}
+.menu-input-name {
+  width: 65%;
+}
+.menu-input-price {
+  width: 30%;
+}
+
+/* 버튼 영역 */
+.button-container {
+  margin: 10px;
+  display: flex;
+  justify-content: end;
+}
+.button-container > button {
+  margin: 0 3px;
+  background-color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 3px;
+}
+
+.title-none {
+  display: none;
+}
+.menu-none {
+  display: none;
+}
+.button-none {
+  display: none;
+}

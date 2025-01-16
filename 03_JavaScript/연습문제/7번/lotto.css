@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+.display-n {
+  display: none;
+}
+.active {
+  background-color: pink;
+}
+
+.container {
+  margin-top: 10px;
+  width: 400px;
+  height: 750px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container > div {
+  border: 1px solid black;
+  border-radius: 100%;
+
+  font-size: 28px;
+  margin: 10px 5px;
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

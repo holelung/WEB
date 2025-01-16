@@ -5,10 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메뉴판</title>
+  <link rel="stylesheet" href="./6.css">
 </head>
 
 <body>
 
+  <main>
+    <div class="title">
+      식당명 :
+      <span id="resTitle">식당명을 입력하세요</span>
+      <input type="text" id="resTitleInput" class="title-none">
+    </div>
+
+    <ul class="menu-container">
+      <li class="menu">
+        <span class="menu-name">카레 돈까스</span>
+        <span class="menu-price">10000원</span>
+        <input type="checkbox" class="menu-check menu-none">
+        <input type="text" class="menu-input-name menu-none">
+        <input type="text" class="menu-input-price menu-none">
+      </li>
+      <li class="menu">
+        <span>돈까스</span>
+        <span>9000원</span>
+        <input type="checkbox" class="menu-check menu-none">
+        <input type="text" class="menu-input-name menu-none">
+        <input type="text" class="menu-input-price menu-none">
+      </li>
+    </ul>
+
+    <div class="button-container">
+      <button id="modifyBtn">수정</button>
+      <button id="addBtn" class="button-none">추가</button>
+      <button id="removeBtn" class="button-none">삭제</button>
+      <button id="endBtn" class="button-none">종료</button>
+    </div>
+  </main>
+
+  <script src="./6.js"></script>
 </body>
 
 </html>
