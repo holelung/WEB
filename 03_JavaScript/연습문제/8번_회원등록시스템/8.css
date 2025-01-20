@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+header {
+  margin: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid lightgray;
+}
+header > span {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/* main container */
+.container {
+  display: flex;
+  margin: 15px 30px;
+}
+
+/* 회원 등록,회원 목록 container 공용설정 */
+.add-user,
+.user-list {
+  width: 50%;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 공용 item 설정 */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 7px 15px;
+  border: 1px solid #4caf50;
+  align-self: flex-start;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 회원 등록 영역 */
+.user-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  user-select: none;
+}
+.input-title {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.user-input {
+  height: 30px;
+}
+
+/* 회원 목록 영역 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+  user-select: none;
+}

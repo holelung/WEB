@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자 야구 게임</title>
+  <link rel="stylesheet" href="9.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <span>⚾ 숫자 야구 게임 ⚾
+      </span>
+    </div>
+
+    <div class="explain">
+      <span>
+        서로 다른 4자리 숫자를 맞춰보세요!
+      </span>
+      <span>
+        🎯 Strike: 숫자와 위치가 모두 맞을 때
+      </span>
+      <span>
+        👀 Ball: 숫자는 맞지만 위치가 다를 때
+      </span>
+    </div>
+
+    <div class="input-number">
+      <input type="text" maxlength="1" id="first">
+      <input type="text" maxlength="1" id="second">
+      <input type="text" maxlength="1" id="third">
+      <input type="text" maxlength="1" id="fourth">
+    </div>
+
+    <div class="btn-container">
+      <button id="check">확인</button>
+      <button id="newGame">새 게임</button>
+    </div>
+
+
+    <div class="game-log">
+      <span id="gameLog"></span>
+    </div>
+
+    <div class="history-container d-none">
+      <span class="history-title">시도 기록</span>
+      <ul class="history-list">
+
+      </ul>
+    </div>
+
+
+  </div>
+
+
+  <script src="9.js"></script>
+</body>
+
+</html>
